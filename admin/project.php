@@ -1,43 +1,8 @@
 <?php
-session_start();
+// WAKTU TARUH DI SINI waktu.php
+    require '../auth/waktu.php'; // sesuaikan path!
 
-if(!isset($_SESSION['login'])){
-    header("Location: login.php");
-    exit;
-}
-
-// ⬇️ TARUH DI SINI
-date_default_timezone_set('Asia/Jakarta');
-
-$hari = [
-    'Sunday' => 'Minggu',
-    'Monday' => 'Senin',
-    'Tuesday' => 'Selasa',
-    'Wednesday' => 'Rabu',
-    'Thursday' => 'Kamis',
-    'Friday' => 'Jumat',
-    'Saturday' => 'Sabtu'
-];
-
-$bulan = [
-    'Jan' => 'Januari',
-    'Feb' => 'Februari',
-    'Mar' => 'Maret',
-    'Apr' => 'April',
-    'May' => 'Mei',
-    'Jun' => 'Juni',
-    'Jul' => 'Juli',
-    'Aug' => 'Agustus',
-    'Sep' => 'September',
-    'Oct' => 'Oktober',
-    'Nov' => 'November',
-    'Dec' => 'Desember'
-];
-
-$hari_ini = $hari[date('l')];
-$bulan_ini = $bulan[date('M')];
-
-$waktu = "$hari_ini, " . date('d') . " $bulan_ini " . date('Y') . " | " . date('H:i');
+    $waktu = getWaktu();
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +13,7 @@ $waktu = "$hari_ini, " . date('d') . " $bulan_ini " . date('Y') . " | " . date('
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/eresa/asset/img/eresa/Logo_putih.png" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body style="font-family: 'Poppins', sans-serif;">
@@ -62,31 +28,31 @@ $waktu = "$hari_ini, " . date('d') . " $bulan_ini " . date('Y') . " | " . date('
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
                         <a href="dashboard.php" class="nav-link text-white d-flex align-items-center">
-                            <img src="/eresa/asset/img/icon/dashboard.jpg" style="width:20px; height:20px; margin-right:10px;" alt="">
+                            <img src="/eresa/asset/img/icon/dashboard.png" style="width:20px; height:20px; margin-right:10px;" alt="">
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="data_contact.php" class="nav-link text-white">
-                            <img src="/eresa/asset/img/icon/contact.jpg" style="width:20px; height:20px; margin-right:10px;" alt="">
+                        <a href="data_contact.php" class="nav-link text-white d-flex align-items-center">
+                            <img src="/eresa/asset/img/icon/contact.png" style="width:20px; height:20px; margin-right:10px;" alt="">
                             Data Contact
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="paket.php" class="nav-link text-white">
-                            <img src="/eresa/asset/img/icon/paket.jpg" style="width:20px; height:20px; margin-right:10px;" alt="">
+                        <a href="paket.php" class="nav-link text-white d-flex align-items-center">
+                            <img src="/eresa/asset/img/icon/paket.png" style="width:20px; height:20px; margin-right:10px;" alt="">
                             Paket
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="transaksi.php" class="nav-link text-white">
-                            <img src="/eresa/asset/img/icon/payment.jpg" style="width:20px; height:20px; margin-right:10px;" alt="">
+                        <a href="transaksi.php" class="nav-link text-white d-flex align-items-center">
+                            <img src="/eresa/asset/img/icon/payment.png" style="width:20px; height:20px; margin-right:10px;" alt="">
                             Transaksi
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="project.php" class="nav-link text-white">
-                            <img src="/eresa/asset/img/icon/project.jpg" style="width:20px; height:20px; margin-right:10px;" alt="">
+                        <a href="project.php" class="nav-link text-white d-flex align-items-center">
+                            <img src="/eresa/asset/img/icon/project.png" style="width:20px; height:20px; margin-right:10px;" alt="">
                             Project
                         </a>
                     </li>

@@ -4,7 +4,7 @@
     <title>Eresa Creative Studio - eresa.id</title>
     <!-- Bootstrap ONLY -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="Asset_IMG/Logo_eresa_putih.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/eresa/asset/img/eresa/Logo_putih.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <style>

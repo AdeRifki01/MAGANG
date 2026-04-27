@@ -6,7 +6,7 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="Asset_IMG/Logo_eresa_putih.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/eresa/asset/img/eresa/Logo_putih.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
 </head>
@@ -41,32 +41,32 @@
     <!-- KANAN - FORM -->
                 <div class="col-md-6">
                     <div class="card shadow p-4 rounded-4">
-                        <form>
+                        <form method="POST" action="contact.php>
                             <div class="row">
                                 <!-- first name -->
                                 <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <input type="text" name="first_name" class="form-control" placeholder="First Name"">
                                 </div>
                                 <!-- last name -->
                                 <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" placeholder="Last Name">
+                                    <input type="text" name="last_name" class="form-control" placeholder="Last Name">
                                 </div>
                             </div>
 
                             <div class="row">
                                 <!-- phone number -->
                                 <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" placeholder="Phone Number">
+                                    <input type="text" name="phone" class="form-control" placeholder="Phone Number">
                                 </div>
                                 <!-- email -->
                                 <div class="col-md-6 mb-3">
-                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <input type="email" name="email" class="form-control" placeholder="Email Address">
                                 </div>
                             </div>
 
                                 <!-- Pesan -->
                             <div class="mb-3">
-                                <textarea class="form-control" rows="4" placeholder="Leave a Message"></textarea>
+                                <textarea name="message" class="form-control" rows="4" placeholder="Leave a Message">
                             </div>
 
                             <!-- Send - Kirim -->

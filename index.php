@@ -14,7 +14,7 @@ file_put_contents($file, $jumlah);
 
     <!-- Bootstrap ONLY -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="Asset_IMG/Logo_eresa_putih.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/eresa/asset/img/eresa/Logo_putih.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="asset/css/index.css">
 
@@ -32,13 +32,8 @@ file_put_contents($file, $jumlah);
 <!-- <div class="container" style="margin-top:100px;"> -->
 <!-- HERO -->
     <section class="d-flex align-items-center text-white text-center"
-        style="
-        height:100vh;
-        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-        url('/eresa/asset/img/eresa/ID_landscape.png');
-        background-size: cover;
-        background-position: center;
-        ">
+        style="height:100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('/eresa/asset/img/eresa/ID_landscape.png'); background-size: cover; background-position: center;">
 
         <div class="container">
             <h4 class="anim-fade-up" style="padding-top:210px;">We Make Your Company Take Off</h4>
@@ -72,10 +67,9 @@ file_put_contents($file, $jumlah);
                 <div style="max-width:800px; margin:auto;">
                     <div class="ratio ratio-16x9">
                         <iframe
-                            width="560" height="315"
-                            src="https://www.youtube.com/embed/0Lp6Q5nnNoE?si=SnUn729mIYdkpOYt"
-                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
+                            width="560" height="315" src="https://www.youtube.com/embed/0Lp6Q5nnNoE?si=SnUn729mIYdkpOYt"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                         </iframe>
                     </div>
                 </div>
@@ -236,7 +230,7 @@ file_put_contents($file, $jumlah);
         <div class="container">
             <h2 class="fw-bold">Portofolio</h2>
             <p class="text-muted">"Eresa.id telah menjadi mitra strategis bagi berbagai bisnis untuk menaklukkan tantangan digital.
-                <br> Jelajahi bagaimana kami memberikan dampak nyata."
+                <br>Jelajahi bagaimana kami memberikan dampak nyata."
             </p>
                 <div class="portfolio-slider mt-4">
                     <div class="portfolio-track" id="portfolioTrack">

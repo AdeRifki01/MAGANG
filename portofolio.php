@@ -16,7 +16,7 @@
     <section class="bg-light d-flex align-items-center" style="min-height:100vh; padding-top:20px;">
         <div class="container" style="margin-top:100px;">
             <h2 class="text-center fw-bold mb-4">Gallery</h2>
-    <!-- FILTER BUTTON -->
+<!-- FILTER BUTTON -->
             <div class="text-center mb-4">
                 <button class="btn border-0 bg-transparent fw-bold me-3 filter-btn active-btn"
                     onclick="filterGallery('all', this)">
@@ -36,7 +36,7 @@
 
 <!-- GRID -->
             <div class="row g-3">
-    <!-- ERESA -->
+<!-- ERESA -->
                 <div class="col-6 col-md-4 col-lg-3 gallery-item eresa">
                     <div class="overflow-hidden rounded">
                         <img src="/eresa/asset/img/portofolio/Porto_1.webp"
@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-    <!-- FEED -->
+<!-- FEED -->
                 <div class="col-6 col-md-4 col-lg-3 gallery-item feed">
                     <div class="overflow-hidden rounded">
                         <img src="/eresa/asset/img/produk/jamuin1.png"
