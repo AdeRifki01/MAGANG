@@ -1,0 +1,106 @@
+/* LOGO CLIENT */
+.logo-wrapper {
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    gap: 60px;
+    animation: scrollLogo 20s linear infinite;
+}
+
+.logo-track img {
+    height: 250px;
+    object-fit: contain;
+}
+
+/* ANIMASI */
+@keyframes scrollLogo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.portfolio-row {
+    overflow: hidden;
+}
+
+.portfolio-track {
+    width: 100%;
+}
+
+/* GAMBAR */
+.portfolio-row img {
+    aspect-ratio: 4/5;
+    object-fit: cover;
+}
+
+/* ANIMASI */
+.portfolio-row.left .row {
+    animation: slideLeft 20s linear infinite;
+}
+
+.portfolio-row.right .row {
+    animation: slideRight 20s linear infinite;
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* .portfolio-img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+} */
+
+/* .portfolio-img {
+    transition: transform 0.5s ease;
+} */
+
+/* --- ANIMASI SEDERHANA --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anim-fade-up {
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    opacity: 0;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.anim-floating {
+    animation: floating 3s ease-in-out infinite;
+}

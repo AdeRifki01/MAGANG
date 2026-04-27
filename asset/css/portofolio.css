@@ -1,0 +1,26 @@
+.filter-btn {
+    position: relative;
+    color: #333;
+}
+
+/* garis bawah */
+.filter-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: black;
+    transition: 0.3s;
+}
+
+/* hover efek */
+.filter-btn:hover::after {
+    width: 100%;
+}
+
+/* tombol aktif */
+.active-btn::after {
+    width: 100%;
+}

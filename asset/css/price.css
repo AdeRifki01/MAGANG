@@ -1,0 +1,64 @@
+/* SECTION */
+.pricing-section {
+    background: #f5f7fb;
+    padding-bottom: 100px;
+}
+
+/* HEADER */
+.pricing-header {
+    background: linear-gradient(135deg, #060d39, #2d5db3);
+    padding: 100px 20px 140px;
+    border-radius: 0 0 40px 40px;
+}
+
+/* CARD POSISI NAIK */
+.pricing-wrapper {
+    margin-top: -100px;
+}
+
+/* CARD */
+.price-card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: left;
+    height: 100%; /* biar tinggi sama */
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* HOVER SEMUA SAMA */
+.price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.highlight {
+    border: 2px solid #2d5db3;
+}
+
+/* TEXT */
+.price-card h3 {
+    font-weight: bold;
+    margin: 15px 0;
+}
+.price-card h3 span {
+    font-size: 12px;
+    color: gray;
+}
+
+/* LIST */
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.price-card ul li {
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.btn-primary {
+    background: #2d5db3;
+    border: none;
+}
