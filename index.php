@@ -43,7 +43,7 @@ file_put_contents($file, $jumlah);
 
             <div class="anim-fade-up delay-2 mt-4">
                 <a href="price.php" class="fw-bold btn btn-outline-light rounded px-4 anim-floating d-inline-block">
-                    AMBIL PAKET
+                    AYO AMBIL PAKET
                 </a>
             </div>
         </div>

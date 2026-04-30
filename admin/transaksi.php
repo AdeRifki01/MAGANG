@@ -3,6 +3,7 @@
 	require '../auth/waktu.php'; // sesuaikan path!
 
 	$waktu = getWaktu();
+	
 ?>
 
 <!DOCTYPE html>
@@ -44,11 +45,28 @@
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="transaksi.php" class="nav-link text-white d-flex align-items-center">
-                            <img src="/eresa/asset/img/icon/payment.png" style="width:20px; height:20px; margin-right:10px;" alt="">
-                            Transaksi
-                        </a>
-                    </li>
+						<a class="nav-link text-white d-flex align-items-center justify-content-between"
+						data-bs-toggle="collapse" href="#transaksiMenu" role="button">
+							<div class="d-flex align-items-center">
+								<img src="/eresa/asset/img/icon/payment.png"
+									style="width:20px; height:20px; margin-right:10px;">
+								Transaksi
+							</div>
+							<!-- ICON PANAH -->
+							<span style="font-size:12px;">▼</span>
+						</a>
+						<!-- SUB MENU -->
+						<div class="collapse ms-4" id="transaksiMenu">
+							<a href="booking.php"
+							class="nav-link text-white d-flex align-items-center mb-1">
+								📌 Booking
+							</a>
+							<a href="riwayat.php"
+							class="nav-link text-white d-flex align-items-center">
+								🧾 Riwayat
+							</a>
+						</div>
+					</li>
                     <li class="nav-item mb-2">
                         <a href="project.php" class="nav-link text-white d-flex align-items-center">
                             <img src="/eresa/asset/img/icon/project.png" style="width:20px; height:20px; margin-right:10px;" alt="">

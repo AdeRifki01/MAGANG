@@ -1,0 +1,86 @@
+.nav-link {
+    border-radius: 10px;
+    padding: 10px 12px;
+    transition: all 0.25s ease;
+}
+
+/* HOVER */
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+/* ACTIVE MENU */
+.nav-link.active {
+    background: linear-gradient(135deg, #2d5db3, #060d39);
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* SUB MENU ACTIVE */
+.collapse .nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #00d4ff !important;
+}
+
+button[aria-expanded="true"] span {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+.collapse a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding-left: 10px;
+    transition: 0.2s;
+}
+.transition-icon {
+    transition: 0.3s;
+}
+
+/* Saat terbuka */
+button[aria-expanded="true"] .transition-icon {
+    transform: rotate(180deg);
+}
+.nav-link {
+    border-radius: 10px;
+    padding: 10px 12px;
+    transition: all 0.25s ease;
+}
+
+/* HOVER */
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+/* ACTIVE MENU */
+.nav-link.active {
+    background: linear-gradient(135deg, #2d5db3, #060d39);
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* SUB MENU ACTIVE */
+.collapse .nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #00d4ff !important;
+}
+
+button[aria-expanded="true"] span {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+.collapse a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding-left: 10px;
+    transition: 0.2s;
+}
+.transition-icon {
+    transition: 0.3s;
+}
+
+/* Saat terbuka */
+button[aria-expanded="true"] .transition-icon {
+    transform: rotate(180deg);
+}

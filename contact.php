@@ -33,19 +33,19 @@
                     </p>
 
                     <p class="mt-4">
-                        <a href="info@eresa.id">📧  info@eresa.id</a><br>
-                        <a href="wa.me/6285117618858">📞 +6285117618858</a>
+                        <a href="mailto:info@eresa.id">📧 info@eresa.id</a><br>
+                        <a href="https://wa.me/6285117618858?text=Halo Eresa, Apakah kita bisa berdiskusi?">📞 +6285117618858</a>
                     </p>
                 </div>
 
     <!-- KANAN - FORM -->
                 <div class="col-md-6">
                     <div class="card shadow p-4 rounded-4">
-                        <form method="POST" action="contact.php>
+                        <form method="POST" action="contact.php">
                             <div class="row">
                                 <!-- first name -->
                                 <div class="col-md-6 mb-3">
-                                    <input type="text" name="first_name" class="form-control" placeholder="First Name"">
+                                    <input type="text" name="first_name" class="form-control" placeholder="First Name">
                                 </div>
                                 <!-- last name -->
                                 <div class="col-md-6 mb-3">
@@ -66,7 +66,7 @@
 
                                 <!-- Pesan -->
                             <div class="mb-3">
-                                <textarea name="message" class="form-control" rows="4" placeholder="Leave a Message">
+                                <textarea name="message" class="form-control" rows="4" placeholder="Leave a Message"></textarea>
                             </div>
 
                             <!-- Send - Kirim -->

@@ -33,117 +33,123 @@ if(isset($_POST['login'])){
     <title>Login Admin | Eresa.id</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-image: url('/eresa/asset/img/eresa/ID_landscape.png');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
+    font-family: 'Inter', sans-serif;
+    background: url('/eresa/asset/img/eresa/ID_landscape.png') no-repeat center/cover;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
 
-        /* Overlay Gelap dengan Blur Sedikit */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(3px);
-            z-index: 1;
-        }
+/* OVERLAY GRADIENT */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(178, 178, 178, 0.13), rgba(122, 122, 122, 0.25));
+    backdrop-filter: blur(6px);
+    z-index: 1;
+}
 
-        .login-container {
-            position: relative;
-            z-index: 2;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+/* CENTER */
+.login-container {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        /* Card Modern - Glassmorphism style */
-        .login-card {
-            width: 100%;
-            max-width: 400px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.3);
-        }
+/* CARD */
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255,255,255,0.95);
+    padding: 45px 35px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    animation: fadeUp 0.7s ease;
+}
 
-        .login-card h4 {
-            font-weight: 700;
-            color: #1a1a1a;
-            letter-spacing: -0.5px;
-            margin-bottom: 30px;
-        }
+/* TITLE */
+.login-card h4 {
+    font-weight: 700;
+    color: #060D39;
+    margin-bottom: 5px;
+}
 
-        /* Styling Input */
-        .form-control {
-            padding: 12px 16px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            background: #f9f9f9;
-            transition: all 0.3s ease;
-        }
+.login-subtitle {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 25px;
+}
 
-        .form-control:focus {
-            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
-            border-color: #333;
-            background: #fff;
-        }
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+}
 
-        /* Tombol Utama */
-        .btn-login {
-            background: #1a1a1a;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
 
-        .btn-login:hover {
-            background: #333;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+/* INPUT */
+.form-control {
+    padding: 12px 12px 12px 40px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    transition: all 0.3s;
+}
 
-        /* Tombol Kembali */
-        .btn-back {
-            background: transparent;
-            color: #666;
-            border: none;
-            font-size: 0.9rem;
-            margin-top: 15px;
-            transition: color 0.3s ease;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-        }
+.form-control:focus {
+    border-color: #2d5db3;
+    box-shadow: 0 0 0 3px rgba(45,93,179,0.15);
+    background: #fff;
+}
 
-        .btn-back:hover {
-            color: #1a1a1a;
-        }
+/* BUTTON */
+.btn-login {
+    background: linear-gradient(135deg, #060D39, #2d5db3);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s;
+}
 
-        /* Animasi Masuk */
-        .fade-up {
-            animation: fadeUp 0.6s ease-out forwards;
-        }
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+/* BACK */
+.btn-back {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #aaa;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    color: #060D39;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
     </style>
 </head>
 <body>
@@ -161,22 +167,22 @@ if(isset($_POST['login'])){
         <?php endif; ?>
 
         <form method="POST">
-            <div class="mb-3">
-                <label class="form-label small fw-bold text-muted">Username</label>
-                <input type="text" name="username" class="form-control" placeholder="Masukkan username" required>
+            <div class="mb-3 input-group">
+                <i class="bi bi-person"></i>
+                <input type="text" name="username" class="form-control" placeholder="Username" required>
             </div>
 
-            <div class="mb-4">
-                <label class="form-label small fw-bold text-muted">Password</label>
-                <input type="password" name="password" class="form-control" placeholder="••••••••" required>
+            <div class="mb-4 input-group">
+                <i class="bi bi-lock"></i>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
             </div>
 
             <button type="submit" name="login" class="btn btn-login w-100">
-                Masuk Sekarang
+                Login
             </button>
 
             <a href="<?= $back; ?>" class="btn-back">
-                &larr; Kembali ke Beranda
+                ← Kembali ke Beranda
             </a>
         </form>
     </div>

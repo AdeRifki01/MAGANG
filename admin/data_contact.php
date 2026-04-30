@@ -8,21 +8,25 @@
 
     // DATA DUMMY DULU
     $data = [
-        [
-            "nama" => "Ade",
-            "email" => "ade@gmail.com",
-            "pesan" => "Saya tertarik jasa social media",
-            "tanggal" => "22 April 2026",
-            "status" => "Baru"
-        ],
-        [
-            "nama" => "Budi",
-            "email" => "budi@gmail.com",
-            "pesan" => "Mau buat website company profile",
-            "tanggal" => "21 April 2026",
-            "status" => "Dibaca"
-        ]
-    ];
+    [
+        "nama" => "Ade",
+        "phone" => "08123456789",
+        "email" => "ade@gmail.com",
+        "company" => "Eresa Studio",
+        "tanggal" => "22 April 2026",
+        "status" => "Baru",
+        "pesan" => "Saya tertarik jasa social media"
+    ],
+    [
+        "nama" => "Budi",
+        "phone" => "08234567891",
+        "email" => "budi@gmail.com",
+        "company" => "Budi Corp",
+        "tanggal" => "21 April 2026",
+        "status" => "Dibaca",
+        "pesan" => "Mau buat website company profile"
+    ]
+];
 $jumlahBaru = 0;
 
 foreach($data as $row){
@@ -42,6 +46,23 @@ foreach($data as $row){
     <link rel="shortcut icon" href="/eresa/asset/img/eresa/Logo_putih.png" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
+    <style>
+        .table td, .table th {
+            padding: 6px 10px;
+            font-size: 13px;
+        }
+        .table-container {
+            border-radius: 8px;
+            overflow: hidden;
+            background: white;
+        }
+
+        /* Hover lebih halus */
+        .table tbody tr:hover {
+            background-color: #f8f9fa;
+            transition: 0.2s;
+        }
+</style>
 </head>
 <body style="font-family: 'Poppins', sans-serif;">
     <div class="container-fluid">
@@ -49,40 +70,93 @@ foreach($data as $row){
 
 <!-- SIDEBAR -->
             <div class="col-md-2 bg-dark text-white vh-100 p-3 d-flex flex-column">
-                <h4 class="fw-bold pt-2">Eresa Admin</h4>
-                <hr>
-                <ul class="nav flex-column">
+                <div class="d-flex align-items-center pt-2">
+                    <img src="/eresa/asset/img/eresa/Logo_putih.png"
+                        style="width:32px; height:32px; object-fit:contain; margin-right:10px;" alt="Logo">
+                    <h5 class="fw-bold mb-0 d-flex align-items-center" style="height:32px;">
+                        Eresa Admin
+                    </h5>
+                </div>
+                
+                <ul class="nav flex-column pt-4">
+                    <hr class="mt-2 mb-2 border">
                     <li class="nav-item mb-2">
-                        <a href="dashboard.php" class="nav-link text-white d-flex align-items-center">
-                            <img src="/eresa/asset/img/icon/dashboard.png" style="width:20px; height:20px; margin-right:10px;" alt="">
+                        <a href="/eresa/admin/dashboard.php" class="nav-link text-white d-flex align-items-center">
+                            <img src="/eresa/asset/img/icon/dashboard.png" style="width:20px; margin-right:10px;">
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="data_contact.php" class="nav-link text-white d-flex align-items-center">
-                            <img src="/eresa/asset/img/icon/contact.png" style="width:20px; height:20px; margin-right:10px;" alt="">
+                        <a href="/eresa/admin/data_contact.php" class="nav-link text-white d-flex align-items-center">
+                            <img src="/eresa/asset/img/icon/contact.png" style="width:20px; margin-right:10px;">
                             Data Contact
                         </a>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="paket.php" class="nav-link text-white d-flex align-items-center">
-                            <img src="/eresa/asset/img/icon/paket.png" style="width:20px; height:20px; margin-right:10px;" alt="">
+                        <a href="/eresa/admin/paket.php" class="nav-link text-white d-flex align-items-center">
+                            <img src="/eresa/asset/img/icon/paket.png" style="width:20px; margin-right:10px;">
                             Paket
                         </a>
                     </li>
+
+                <!-- TRANSAKSI DROPDOWN -->
                     <li class="nav-item mb-2">
-                        <a href="transaksi.php" class="nav-link text-white d-flex align-items-center">
-                            <img src="/eresa/asset/img/icon/payment.png" style="width:20px; height:20px; margin-right:10px;" alt="">
-                            Transaksi
-                        </a>
+                        <!-- BUTTON -->
+                        <button class="nav-link text-white d-flex justify-content-between align-items-center w-100 border-0 bg-transparent"
+                                type="button" data-bs-toggle="collapse" data-bs-target="#transaksiMenu" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <img src="/eresa/asset/img/icon/payment.png"
+                                    style="width:20px; margin-right:10px;">
+                                Transaksi
+                            </div>
+                            <i class="bi bi-chevron-down transition-icon"></i>
+                        </button>
+                        <!-- SUB MENU -->
+                        <div class="collapse ms-4 <?= $isTransaksi ? 'show' : '' ?>" id="transaksiMenu">
+                            <a href="/eresa/admin/transaksi/booking.php" class="nav-link text-white <?= $current == 'booking.php' ? 'fw-bold text-info' : '' ?>">
+                                📌 Booking
+                            </a>
+                            <a href="/eresa/admin/transaksi/riwayat.php" class="nav-link text-white <?= $current == 'riwayat.php' ? 'fw-bold text-info' : '' ?>">
+                                🧾 Riwayat
+                            </a>
+                        </div>
                     </li>
                     <li class="nav-item mb-2">
-                        <a href="project.php" class="nav-link text-white d-flex align-items-center">
-                            <img src="/eresa/asset/img/icon/project.png" style="width:20px; height:20px; margin-right:10px;" alt="">
+                        <a href="/eresa/admin/project.php" class="nav-link text-white d-flex align-items-center">
+                            <img src="/eresa/asset/img/icon/project.png" style="width:20px; margin-right:10px;">
                             Project
                         </a>
                     </li>
+                    <hr class="mt-0 mb-2 border">
+                <!-- GALLERY DROPDOWN -->
+                    <li class="nav-item mb-2">
+                        <!-- BUTTON -->
+                        <button class="nav-link text-white d-flex justify-content-between align-items-center w-100 border-0 bg-transparent"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#galleryMenu" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <img src="/eresa/asset/img/icon/gallery.png"
+                                    style="width:20px; margin-right:10px;">
+                                Gallery
+                            </div>
+                            
+                            <i class="bi bi-chevron-down transition-icon"></i>
+                        </button>
+
+                        <!-- SUB MENU -->
+                        <div class="collapse ms-4 <?= $isGallery ? 'show' : '' ?>" id="galleryMenu">
+                            <a href="/eresa/admin/gallery/index.php"
+                            class="nav-link text-white <?= $current == 'index.php' ? 'fw-bold text-info' : '' ?>">
+                                🏠 Home
+                            </a>
+                            <a href="/eresa/admin/gallery/portofolio.php"
+                            class="nav-link text-white <?= $current == 'portofolio.php' ? 'fw-bold text-info' : '' ?>">
+                                🎨 Portofolio
+                            </a>
+                        </div>
+                    </li>
                 </ul>
+
+                <!-- PUSH KE BAWAH LOGOUT -->
                 <div class="mt-auto">
                     <hr>
                     <a href="/eresa/auth/logout.php" class="btn btn-danger w-100">Logout</a>
@@ -95,87 +169,55 @@ foreach($data as $row){
                     <h3 class="fw-bold">📩 Data Contact Masuk</h3>
 
                     <!-- NOTIFIKASI -->
-                    <div class="position-relative">
-                        <button class="btn position-relative" data-bs-toggle="dropdown">
-                            <i class="bi bi-bell-fill" style="font-size:20px;"></i>
-                            <!-- JUMLAH NOTIF -->
-                            <?php if($jumlahBaru > 0): ?>
-                            <span id="notifBadge"
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                <?= $jumlahBaru; ?>
-                            </span>
-                            <?php endif; ?>
-                        </button>
-
-                        <!-- DROPDOWN PESAN NOFIF-->
-                        <ul class="dropdown-menu dropdown-menu-end p-2" style="width:300px;">
-                            <li><h6 class="dropdown-header">Pesan Baru</h6></li>
-                            <!-- ISI PESAN -->
-                            <?php foreach($data as $row): ?>
-                                <?php if($row['status'] == "Baru"): ?>
-                                <li class="mb-2">
-                                    <div class="border rounded p-2">
-                                        <strong><?= $row['nama']; ?></strong><br>
-                                        <small><?= substr($row['pesan'],0,40); ?>...</small>
-                                    </div>
-                                </li>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-
-                            <!-- TIDAK ADA PESAN -->
-                            <?php if($jumlahBaru == 0): ?>
-                                <li class="text-center text-muted">Tidak ada pesan baru</li>
-                            <?php endif; ?>
-                        </ul>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <!-- SEARCH -->
+                        <div style="width:250px;">
+                            <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="🔍 Cari data...">
+                        </div>
                     </div>
                 </div>
                 
 <!-- DATA CLIENT -->
+    <!-- TABEL -->
                 <div class="card shadow p-2">
-                    <div class="table-responsive">
-<!-- TABEL -->
-                        <table class="table table-bordered align-middle">
+                    <div class="table-container shadow">
+                        <table class="table table-bordered table-sm align-middle mb-0">
                             <thead class="table-dark text-center">
                                 <tr>
-                                    <th>Nama</th>
+                                    <th>Name</th>
+                                    <th>Phone</th>
                                     <th>Email</th>
-                                    <th>Pesan</th>
-                                    <th>Tanggal</th>
-                                    <th>Status</th>
-                                    <th>Aksi</th>
+                                    <th>Company</th>
+                                    <th>Created Date</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
-<!-- ISI DATA -->
+
                             <tbody>
                             <?php foreach($data as $row): ?>
-                            <tr>
-                                <td><?= $row['nama']; ?></td>
-                                <td><?= $row['email']; ?></td>
-                                <td><?= $row['pesan']; ?></td>
-                                <td><?= $row['tanggal']; ?></td>
-                                <!-- STATUS BADGE -->
-                                <td class="text-center">
-                                    <?php if($row['status'] == "Baru"): ?>
-                                        <span class="badge bg-danger">New Message</span>
-                                    <?php else: ?>
-                                        <span class="badge bg-success">Read</span>
-                                    <?php endif; ?>
-                                </td>
-<!-- AKSI -->
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-info"
-                                        data-bs-toggle="modal"
-                                        data-bs-target="#detailModal"
-                                        onclick="setDetail(this,'<?= $row['nama']; ?>','<?= $row['email']; ?>','<?= $row['pesan']; ?>')">
-                                        Detail
-                                    </button>
-                                    <button class="btn btn-sm btn-danger" onclick="hapusBaris(this)">
-                                        Hapus
-                                    </button>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
+                                <tr>
+                                    <td><?= $row['nama']; ?></td>
+                                    <td><?= $row['phone']; ?></td>
+                                    <td><?= $row['email']; ?></td>
+                                    <td><?= $row['company']; ?></td>
+                                    <td><?= $row['tanggal']; ?></td>
 
+                                    <!-- ACTION -->
+                                    <td class="text-center">
+                                        <!-- DETAIL -->
+                                        <button class="btn btn-sm btn-info"
+                                            data-bs-toggle="modal" data-bs-target="#detailModal"
+                                            onclick="setDetail(this,'<?= $row['nama']; ?>','<?= $row['email']; ?>','<?= $row['pesan']; ?>')">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+
+                                        <!-- HAPUS -->
+                                        <button class="btn btn-sm btn-danger" onclick="hapusBaris(this)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
@@ -236,6 +278,21 @@ foreach($data as $row){
             }
         }
     }
+
+    document.getElementById("searchInput").addEventListener("keyup", function() {
+        let keyword = this.value.toLowerCase();
+        let rows = document.querySelectorAll("tbody tr");
+
+        rows.forEach(row => {
+            let text = row.innerText.toLowerCase();
+
+            if(text.includes(keyword)){
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    });
     </script>
 
 </body>
