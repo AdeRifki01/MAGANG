@@ -55,7 +55,7 @@
                     </h5>
                 </div>
                 
-                <ul class="nav flex-column pt-4">
+                <ul class="nav flex-column pt-2">
                     <hr class="mt-2 mb-2 border">
                     <li class="nav-item mb-2"> <!-- Dasboard -->
                         <a href="/eresa/admin/dashboard.php" class="nav-link text-white d-flex align-items-center">
@@ -141,16 +141,18 @@
             </div>
 
 <!-- MAIN CONTENT -->
-            <div class="col-md-10 p-4">
+            <div class="col-md-10 p-2">
 
                 <!-- TOPBAR -->
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h3 class="fw-bold">Dashboard</h3>
-
-                <!-- Waktu -->
-                <span class="text-muted">
-                    <?php echo $waktu; ?>
-                </span>
+                <div class="card shadow-sm mb-4 card-topbar" style="border-radius: 12px; border-left: 5px solid #0d6efd;">
+                    <div class="card-body d-flex justify-content-between align-items-center">
+                        <div>
+                            <h4 class="fw-bold mb-0">Dashboard</h4>
+                        </div>
+                        <div class="text-muted">
+                            <?= $waktu; ?>
+                        </div>
+                    </div>
                 </div>
 
 <!-- CHART Statistik -->

@@ -64,3 +64,60 @@ button[aria-expanded="true"] span {
 button[aria-expanded="true"] .transition-icon {
     transform: rotate(180deg);
 }
+
+.paket-card {
+    border-radius: 18px;
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.paket-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* HEADER GRADIENT */
+.paket-header {
+    background: linear-gradient(135deg, #0d6efd, #4dabf7);
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+/* BADGE POPULAR */
+.badge-popular {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ffc107;
+    color: #000;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* ICON LIST */
+.fitur-list li {
+    margin-bottom: 6px;
+    list-style: none;
+}
+
+.fitur-list li::before {
+    content: "✔";
+    color: #0d6efd;
+    margin-right: 8px;
+}
+
+/* BUTTON STYLE */
+.btn-cart {
+    border-radius: 10px;
+}
+
+.btn-checkout {
+    border-radius: 10px;
+    font-weight: 500;
+}

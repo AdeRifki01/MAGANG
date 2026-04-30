@@ -57,7 +57,7 @@
                     </h5>
                 </div>
                 
-                <ul class="nav flex-column pt-4">
+                <ul class="nav flex-column pt-2">
                     <hr class="mt-2 mb-2 border">
                     <li class="nav-item mb-2">
                         <a href="/eresa/admin/dashboard.php" class="nav-link text-white d-flex align-items-center">
@@ -144,69 +144,85 @@
             </div>        
 
 <!-- MAIN CONTENT -->
-        <div class="col-md-10 p-4">
+        <div class="col-md-10 p-2">
 
             <!-- TOPBAR -->
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h3 class="fw-bold">Paket</h3>
-                <span class="text-muted"><?= $waktu; ?></span>
+            <div class="card shadow-sm mb-4 card-topbar" style="border-radius: 12px; border-left: 5px solid #0d6efd;">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                    <div>
+                        <h4 class="fw-bold mb-0">Paket Management 📦</h4>
+                    </div>
+                    <div class="text-muted">
+                        <?= $waktu; ?>
+                    </div>
+                </div>
             </div>
 
-            <!-- HEADER -->
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h4 class="fw-bold">Daftar Paket</h4>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPaket">
-                    +  Paket
-                </button>
-                
-            </div>
+            <!-- HEADER + LIST PAKET -->
+            <div class="mt-4">
+                <div class="card shadow p-3">
 
-            <!-- LIST PAKET -->
-            <div class="row">
+                    <!-- HEADER -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="fw-bold">Daftar Paket</h4>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPaket">
+                            + Paket
+                        </button>
+                    </div>
 
-                <!-- CARD -->
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow paket-card h-100 d-flex flex-column">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="fw-bold">Reguler</h5>
-                            <h3 class="text-primary">Rp4.499K <span style="font-size:16px; color:#777777;">/bulan</span></h3>
-                            <ul class="mt-2 ps-3 flex-grow-1" style="font-size:12px;">
-                                <li>Riset dan Rencana konten.</li>
-                                <li>Branding.</li>
-                                <li>Produksi Konten. 17 Feed, 10 Story, dan 4 Video (inc. VO & Talent). </li>
-                                <li>Caption & Hastag SEO friendly.</li>
-                                <li>Operasional : Admin, posting, & koordinasi grup.</li>
-                                <li>Evaluasi : Laporan bulanan & 2x revisi minor.</li>
-                            </ul>
+                    <!-- LIST CARD PAKET -->
+                    <div class="row">
 
-                            <!-- ACTION BUTTON -->
-                            <div class="d-flex justify-content-between align-items-center mt-auto">
-                                <!-- KIRI (EDIT & DELETE) -->
-                                <div>
-                                    <button class="btn btn-sm btn-warning me-1" title="Edit">
-                                        <i class="bi bi-pencil-fill"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-danger" title="Hapus" onclick="hapusPaket(this)">
-                                        <i class="bi bi-trash-fill"></i>
-                                    </button>
-                                </div>
+                        <!-- CARD -->
+                        <div class="col-md-4 mb-3">
+                            <div class="card paket-card h-100 d-flex flex-column shadow-sm">
+                                <div class="card-body d-flex flex-column">
 
-                                <!-- KANAN (CART & CHECKOUT) -->
-                                <div>
-                                    <button class="btn btn-sm btn-outline-primary me-1" title="Tambah ke Keranjang" onclick="tambahKeranjang('Reguler')">
-                                        <i class="bi bi-cart-plus"></i>
-                                    </button>
-                                    <button class="btn btn-sm btn-success" onclick="checkout('Reguler')">
-                                        Checkout
-                                    </button>
+                                    <h5 class="fw-bold">Reguler</h5>
+                                    <h3 class="text-primary">
+                                        Rp4.499K 
+                                        <span style="font-size:14px; color:#777;">/bulan</span>
+                                    </h3>
+
+                                    <ul class="mt-2 ps-3 flex-grow-1" style="font-size:12px;">
+                                        <li>Riset dan Rencana konten</li>
+                                        <li>Branding</li>
+                                        <li>17 Feed, 10 Story, 4 Video</li>
+                                        <li>Caption SEO friendly</li>
+                                        <li>Admin & Posting</li>
+                                    </ul>
+
+                                    <!-- ACTION -->
+                                    <div class="d-flex justify-content-between align-items-center mt-auto">
+                                        
+                                        <!-- EDIT & DELETE -->
+                                        <div>
+                                            <button class="btn btn-sm btn-warning me-1">
+                                                <i class="bi bi-pencil-fill"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-danger" onclick="hapusPaket(this)">
+                                                <i class="bi bi-trash-fill"></i>
+                                            </button>
+                                        </div>
+
+                                        <!-- CART & CHECKOUT -->
+                                        <div>
+                                            <button class="btn btn-sm btn-outline-primary me-1" onclick="tambahKeranjang('Reguler')">
+                                                <i class="bi bi-cart-plus"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-success" onclick="checkout('Reguler')">
+                                                Checkout
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- END CARD -->
                     </div>
+                    <!-- END ROW -->
                 </div>
-                <!-- TUTUP CARD -->
             </div>
-            <!-- TUTUP LIST PAKET -->
         </div>
         <!-- TUTUP MAIN CONTENT -->
     </div>
