@@ -1,5 +1,4 @@
 <?php
-// 
     session_start();
 // SESI LOGIN
     if(!isset($_SESSION['login'])){
@@ -7,7 +6,7 @@
         exit;
     }
 
-    //require '../auth/waktu.php';
+//require '../auth/waktu.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/eresa/auth/waktu.php';
 
     $waktu = getWaktu();
@@ -20,7 +19,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin - Paket</title>
+    <title>Paket - eresa.id</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->

@@ -1,17 +1,16 @@
 <?php
-// 
     $current = basename($_SERVER['PHP_SELF']);
-    
-    $jumlahPesan = rand(5, 50);
-    $jumlahView = rand(100, 1000);
-    $jumlahPembayaran = rand(1, 20);
 
     session_start();
 // SESI LOGIN
     if(!isset($_SESSION['login'])){
         header("Location: /eresa/auth/login.php");
         exit;
+    
     }
+    $jumlahPesan = rand(5, 50);
+    $jumlahView = rand(100, 1000);
+    $jumlahPembayaran = rand(1, 20);
     $jumlah = 125; // Sementara Dulu
 
 // WAKTU TARUH DI SINI waktu.php

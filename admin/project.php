@@ -1,5 +1,13 @@
 <?php
     $current = basename($_SERVER['PHP_SELF']);
+    
+    session_start();
+// SESI LOGIN
+    if(!isset($_SESSION['login'])){
+        header("Location: /eresa/auth/login.php");
+        exit;
+    }
+
 // WAKTU TARUH DI SINI waktu.php
     //require '../auth/waktu.php'; // sesuaikan path!
     require $_SERVER['DOCUMENT_ROOT'] . '/eresa/auth/waktu.php';
@@ -14,7 +22,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Dashboard</title>
+    <title>Project - eresa.id</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap -->

@@ -1,4 +1,11 @@
 <?php
+	session_start();
+// SESI LOGIN
+    if(!isset($_SESSION['login'])){
+        header("Location: /eresa/auth/login.php");
+        exit;
+    }
+
 // WAKTU TARUH DI SINI waktu.php
 	require '../auth/waktu.php'; // sesuaikan path!
 

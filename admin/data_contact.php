@@ -1,8 +1,8 @@
 <?php
     session_start();
-
+// SESI LOGIN
     if(!isset($_SESSION['login'])){
-        header("Location: login.php");
+        header("Location: /eresa/auth/login.php");
         exit;
     }
 

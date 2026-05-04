@@ -62,9 +62,9 @@ style="
                 <li class="nav-item">
                     <a href="contact.php" class="nav-link text-light">Contact</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="/eresa/admin/dashboard.php" class="nav-link text-warning">Admin 👤</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
