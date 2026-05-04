@@ -46,6 +46,7 @@
 
 <!-- SIDEBAR -->
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/eresa/components/sidebar.php'; ?>
+
 <!-- MAIN CONTENT -->
             <div class="col-md-10 p-2">
     <!-- TOPBAR -->

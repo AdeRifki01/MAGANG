@@ -1,0 +1,30 @@
+/* NORMAL */
+.sidebar {
+    width: 240px;
+    transition: 0.3s;
+}
+
+/* MINI */
+.sidebar.collapsed {
+    width: 80px;
+}
+
+/* TEXT HILANG */
+.sidebar.collapsed .menu-text {
+    display: none;
+}
+
+/* CENTER ICON */
+.sidebar.collapsed .nav-link {
+    justify-content: center;
+}
+
+/* HILANGKAN ARROW */
+.sidebar.collapsed .bi-chevron-down {
+    display: none;
+}
+
+/* LOGO TEXT HILANG */
+.sidebar.collapsed h5 {
+    display: none;
+}
