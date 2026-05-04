@@ -158,10 +158,8 @@
             <!-- HEADER + LIST PAKET -->
             <div class="mt-4">
                 <div class="card shadow p-3">
-
                     <!-- HEADER -->
                     <div class="d-flex justify-content-between align-items-center mb-4">
-
                         <div class="d-flex gap-2 mt-3 flex-wrap">
                             <button class="btn btn-sm btn-primary">All Paket</button>
                             <button class="btn btn-sm btn-outline-primary">Paket Layanan</button>
@@ -174,18 +172,15 @@
 
                     <!-- LIST CARD PAKET -->
                     <div class="row">
-
                         <!-- CARD -->
                         <div class="col-md-4 mb-3">
                             <div class="card paket h-100 d-flex flex-column shadow-sm">
                                 <div class="card-body d-flex flex-column">
-
                                     <h5 class="fw-bold">Reguler</h5>
                                     <h3 class="text-primary">
                                         Rp4.499K 
                                         <span style="font-size:14px; color:#777;">/bulan</span>
                                     </h3>
-
                                     <ul class="mt-2 ps-3 flex-grow-1" style="font-size:12px;">
                                         <li>Riset dan Rencana konten</li>
                                         <li>Branding</li>
@@ -193,10 +188,8 @@
                                         <li>Caption SEO friendly</li>
                                         <li>Admin & Posting</li>
                                     </ul>
-
                                     <!-- ACTION -->
                                     <div class="d-flex justify-content-between align-items-center mt-auto">
-                                        
                                         <!-- EDIT & DELETE -->
                                         <div>
                                             <button class="btn btn-sm btn-warning me-1">
@@ -206,7 +199,6 @@
                                                 <i class="bi bi-trash-fill"></i>
                                             </button>
                                         </div>
-
                                         <!-- CART & CHECKOUT -->
                                         <div>
                                             <button class="btn btn-sm btn-outline-primary me-1" onclick="tambahKeranjang('Reguler')">
@@ -222,7 +214,6 @@
                         </div>
                         <!-- END CARD -->
                     </div>
-                    <!-- END ROW -->
                 </div>
             </div>
         </div>

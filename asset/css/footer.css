@@ -1,19 +1,348 @@
-.footer-link {
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    opacity: 0.8;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =============================================
+   FOOTER - Premium Dark Design
+   ============================================= */
+
+footer {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b2a4a 50%, #0f3460 100%) !important;
+    position: relative;
+    overflow: hidden;
 }
-.footer-link:hover {
-    opacity: 1;
-    padding-left: 5px;
-    color: #feda75;
+
+/* ---- Dekorasi lingkaran abstrak di background ---- */
+footer::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(77, 171, 247, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
 }
+
+footer::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(45, 93, 179, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* ---- Divider garis atas footer ---- */
+.footer-divider {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 0 0 28px 0;
+}
+
+/* ---- Brand / Logo Area ---- */
+.footer-brand-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, #74c0fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.footer-brand-tagline {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+/* ---- Social Media Icons ---- */
+.footer-socmed-wrap {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .socmed-icon {
-    font-size: 22px;
-    transition: 0.3s;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white !important;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
 }
+
 .socmed-icon:hover {
-    transform: scale(1.2);
+    transform: translateY(-4px) scale(1.1);
+    border-color: transparent;
+}
+
+/* Facebook hover */
+.socmed-icon.fb:hover {
+    background: #1877f2;
+    box-shadow: 0 8px 20px rgba(24, 119, 242, 0.45);
+}
+
+/* Instagram hover */
+.socmed-icon.ig:hover {
+    background: radial-gradient(circle at 30% 30%, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    box-shadow: 0 8px 20px rgba(214, 41, 118, 0.45);
+}
+
+/* TikTok hover */
+.socmed-icon.tt:hover {
+    background: #010101;
+    box-shadow: 0 8px 20px rgba(1, 1, 1, 0.5);
+}
+
+/* ---- Section Heading Footer ---- */
+.footer-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #74c0fc;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-heading::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(116, 192, 252, 0.3), transparent);
+}
+
+/* ---- Navigation Links ---- */
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.65) !important;
+    text-decoration: none !important;
+    font-size: 0.875rem;
+    padding: 5px 0;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.footer-link::before {
+    content: "›";
+    font-size: 1rem;
+    color: #4dabf7;
+    opacity: 0;
+    transform: translateX(-6px);
+    transition: all 0.25s ease;
+    line-height: 1;
+}
+
+.footer-link:hover {
+    color: #ffffff !important;
+    padding-left: 8px;
+    opacity: 1;
+}
+
+.footer-link:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ---- Contact Info Cards ---- */
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+}
+
+.footer-contact-item:hover {
+    background: rgba(77, 171, 247, 0.1);
+    border-color: rgba(77, 171, 247, 0.25);
+    transform: translateX(4px);
+}
+
+.footer-contact-icon {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    flex-shrink: 0;
+}
+
+.footer-contact-text {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer-contact-text strong {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 2px;
+}
+
+/* ---- Copyright Bar ---- */
+.footer-copyright {
+    background: rgba(0, 0, 0, 0.35);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 16px 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-copyright p {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+}
+
+.footer-copyright a {
+    color: rgba(255, 255, 255, 0.65) !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.footer-copyright a:hover {
+    color: #74c0fc !important;
+}
+
+.footer-copyright .separator {
+    margin: 0 8px;
+    opacity: 0.3;
+}
+
+/* ---- Back to Top Button ---- */
+.btn-back-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 0.78rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+
+.btn-back-top:hover {
+    background: rgba(77, 171, 247, 0.15);
+    border-color: rgba(77, 171, 247, 0.35);
+    color: #74c0fc !important;
+    transform: translateY(-2px);
+}
+
+/* SUBSCRIBE */
+.footer-subscribe {
+    background: #f8f9fa;
+}
+
+/* MAIN FOOTER */
+.footer-main {
+    background: #ffffff;
+    color: #222;
+}
+
+.footer-brand-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.footer-brand-tagline {
+    color: #e74c3c;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* LINK */
+.footer-link {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.footer-link:hover {
+    color: #000;
+}
+
+/* HEADING */
+.footer-heading {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* CONTACT */
+.footer-contact-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #444;
+}
+
+.footer-contact-icon {
+    font-size: 18px;
+}
+
+/* SOCIAL */
+.socmed-icon {
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f1f1f1;
+    color: #333;
+    margin-right: 8px;
+}
+
+.socmed-icon:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    background: #0d0d1f;
+    color: #fff;
+    font-size: 13px;
+}
+
+.footer-bottom-link {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-bottom-link:hover {
+    color: #fff;
 }
