@@ -121,3 +121,19 @@ button[aria-expanded="true"] .transition-icon {
     border-radius: 10px;
     font-weight: 500;
 }
+
+.paket-card {
+    border-radius: 16px;
+    transition: all 0.25s ease;
+    background: #ffffff;
+}
+
+.paket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* OPTIONAL: biar lebih premium */
+.paket-card hr {
+    opacity: 0.1;
+}
