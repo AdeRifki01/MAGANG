@@ -158,7 +158,13 @@ if(isset($_POST['login'])){
 
 <div class="login-container">
     <div class="login-card fade-up">
-        <h4 class="text-center">Admin Login</h4>
+        <div class="d-flex align-items-center justify-content-center mb-4">
+            <img src="/eresa/asset/img/eresa/Logo_biru.png" 
+                style="width:45px; height:45px; object-fit:contain; margin-right:12px;">
+            <div>
+                <h5 class="mb-0 fw-bold">Eresa Admin</h5>
+            </div>
+        </div>
 
         <?php if(isset($error)) : ?>
             <div class="alert alert-danger py-2 mb-4" style="border-radius: 10px; font-size: 0.85rem;">
@@ -171,16 +177,13 @@ if(isset($_POST['login'])){
                 <i class="bi bi-person"></i>
                 <input type="text" name="username" class="form-control" placeholder="Username" required>
             </div>
-
             <div class="mb-4 input-group">
                 <i class="bi bi-lock"></i>
                 <input type="password" name="password" class="form-control" placeholder="Password" required>
             </div>
-
             <button type="submit" name="login" class="btn btn-login w-100">
                 Login
             </button>
-
             <a href="<?= $back; ?>" class="btn-back">
                 ← Kembali ke Beranda
             </a>

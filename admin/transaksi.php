@@ -28,7 +28,7 @@
 	<div class="container-fluid">
 		<div class="row">
 
-			<!-- SIDEBAR -->
+<!-- SIDEBAR -->
 			<div class="col-md-2 bg-dark text-white vh-100 p-3 d-flex flex-column">
 				<h4 class="fw-bold pt-2">Eresa Admin</h4>
 				<hr>
@@ -81,8 +81,7 @@
                         </a>
                     </li>
                 </ul>
-
-				<!-- PUSH KE BAWAH -->
+<!-- LOGOUT-->
 				<div class="mt-auto">
 					<hr>
 					<a href="/eresa/auth/logout.php" class="btn btn-danger w-100">Logout</a>
@@ -90,9 +89,8 @@
 			</div>
 			<!-- TUTUP SIDEBAR -->
 
-			<!-- MAIN CONTENT -->
+<!-- MAIN CONTENT -->
 			<div class="col-md-10 p-4">
-
 				<!-- TOPBAR -->
 				<div class="d-flex justify-content-between align-items-center mb-4">
 					<h3 class="fw-bold">Transaksi</h3>
@@ -100,6 +98,7 @@
                <span class="text-muted">
                     <?php echo $waktu; ?>
                </span>
+			   
 				</div>
 				<!-- TAB -->
 				<ul class="nav nav-tabs mb-4">
