@@ -64,16 +64,6 @@
         transform: translateX(0);
     }
 }
-/* .portfolio-img {
-    width: 100%;
-    aspect-ratio: 4/5;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-} */
-
-/* .portfolio-img {
-    transition: transform 0.5s ease;
-} */
 
 /* --- ANIMASI SEDERHANA --- */
 @keyframes fadeInUp {

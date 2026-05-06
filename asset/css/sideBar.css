@@ -28,3 +28,75 @@
 .sidebar.collapsed h5 {
     display: none;
 }
+
+.sidebar {
+    width: 240px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+/* TEXT HILANG */
+.sidebar.collapsed .menu-text {
+    display: none;
+}
+
+/* CENTER ICON */
+.sidebar.collapsed .nav-link {
+    justify-content: center;
+}
+
+/* ICON STYLE */
+.sidebar .nav-link i {
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+}
+
+/* ACTIVE MENU */
+.sidebar .nav-link.active {
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+/* HOVER */
+.sidebar .nav-link:hover {
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+}
+
+/* HILANGKAN ARROW */
+.sidebar.collapsed .bi-chevron-down {
+    display: none;
+}
+
+/* HEADER TEXT HILANG */
+.sidebar.collapsed h5 {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 240px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* MINI */
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.main-content {
+    margin-left: 240px;
+    transition: 0.3s;
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 80px;
+}

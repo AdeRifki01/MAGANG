@@ -81,21 +81,32 @@ foreach($data as $row){
     <div class="container-fluid">
         <div class="row">
 <!-- SIDEBAR -->
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/eresa/components/sidebar.php'; ?>
+<div class="col-md-2 p-0">
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/eresa/components/sidebar.php'; ?>
+</div>
 
 <!-- MAIN CONTENT -->
             <div class="col-md-10 p-2">
     <!-- TOPBAR -->
-                <div class="card shadow-sm mb-4 card-topbar" style="border-radius: 12px; border-left: 5px solid #0d6efd;">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                        <div>
-                            <h4 class="fw-bold mb-0">📩 Data Contact Masuk</h4>
+                <div class="topbar d-flex justify-content-between align-items-center mb-4">
+                    <h4 class="fw-bold mb-0">Dashboard</h4>
+                    <div class="d-flex align-items-center gap-3">
+                    <!-- SEARCH -->
+                        <div class="search-box">
+                            <input type="text" placeholder="Search..." class="form-control">
+                            <i class="bi bi-search"></i>
                         </div>
-                        <div style="width:200px;">
-                            <input type="text" id="searchInput" class="form-control form-control-sm" placeholder="🔍 Cari data...">
+                    <!-- DARK MODE -->
+                        <button class="btn btn-light" onclick="toggleTheme()">
+                            <i class="bi bi-moon"></i>
+                        </button>
+                    <!-- USER -->
+                        <div class="user-box d-flex align-items-center">
+                            <img src="https://i.pravatar.cc/40" class="rounded-circle">
+                            <span class="ms-2">Admin</span>
                         </div>
                     </div>
-                </div>                
+                </div>             
 <!-- DATA CLIENT -->
     <!-- TABEL -->
                 <div class="card shadow p-2">

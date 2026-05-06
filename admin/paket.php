@@ -163,7 +163,7 @@
                         <div class="d-flex gap-2 mt-3 flex-wrap">
                             <button class="btn btn-sm btn-primary">All Paket</button>
                             <button class="btn btn-sm btn-outline-primary">Paket Layanan</button>
-                            <button class="btn btn-sm btn-outline-primary">Internal Review</button>
+                            <button class="btn btn-sm btn-outline-primary">Paket Hemat</button>
                         </div>
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPaket">
                             + Paket
